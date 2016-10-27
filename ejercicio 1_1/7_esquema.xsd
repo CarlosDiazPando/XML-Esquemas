@@ -7,20 +7,28 @@
             <xs:complexType>
               <xs:sequence>
                 <xs:choice minOccurs="1" maxOccurs="1">
-                <xs:element name="ingreso" type="xs:string"/>
-                <xs:element name="gasto" type="xs:string"/>
+                <xs:element name="ingreso">
+                  <xs:complexType />
+                </xs:element>
+                <xs:element name="gasto">
+                 <xs:complexType />
+                </xs:element>
                 </xs:choice> 
                 <xs:element name="fecha" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="cantidad" maxOccurs="unbounded"> 
-                  <xs:restriction base="xs:integer">
-                    <xs:fractionDigits value="2" />
-                  </xs:restriction>
-                </xs:element>  
+                  <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                      <xs:fractionDigits value="2" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
                 <xs:element name="moneda" maxOccurs="unbounded">
-                  <xs:restriction base="xs:string">
-                    <xs:enumeration value="euro"/>
-                    <xs:enumeration value="dolar"/>
-                  </xs:restriction>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="euro"/>
+                      <xs:enumeration value="dolar"/>
+                    </xs:restriction>
+                  </xs:simpleType>
                 </xs:element> 
                 <xs:element name="concepto" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
               </xs:sequence>
