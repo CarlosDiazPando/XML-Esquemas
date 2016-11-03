@@ -6,6 +6,12 @@
     <nota>3.50</nota>
     <edad>45</edad>
     <comentario>Necesita mejorar</comentario>
+    <direccion>
+      <calle>Comandante Vallespín</calle>
+      <numero>5</numero>
+      <poblacion>Oviedo</poblacion>
+      <cp>33021</cp>
+    </direccion>
   </alumno>
   <alumno DNI="11223344A">
     <nombre>Luis</nombre>  
@@ -26,5 +32,11 @@
     <nota>0</nota>
     <edad>42</edad>
     <comentario>Estudió Universidad de Oviedo</comentario>
+    <direccion>
+      <calle>Comandante Vallespín</calle>
+      <numero>5</numero>
+      <poblacion>Oviedo</poblacion>
+      <cp>33021</cp>
+    </direccion>
   </alumno>
 </alumnos>
